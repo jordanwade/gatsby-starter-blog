@@ -2,60 +2,17 @@ import React from 'react'
 import Link from 'gatsby-link'
 
 import { rhythm, scale } from '../utils/typography'
+import profilePic from '../components/profile-pic.svg'
 
 class Template extends React.Component {
   render() {
     const { location, children } = this.props
-    let header
 
     let rootPath = `/`
     if (typeof __PREFIX_PATHS__ !== `undefined` && __PREFIX_PATHS__) {
       rootPath = __PATH_PREFIX__ + `/`
     }
 
-    if (location.pathname === rootPath) {
-      header = (
-        <h1
-          style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: 'none',
-              textDecoration: 'none',
-              color: 'inherit',
-            }}
-            to={'/'}
-          >
-            🚧
-          </Link>
-        </h1>
-      )
-    } else {
-      header = (
-        <h3
-          style={{
-            fontFamily: 'Montserrat, sans-serif',
-            marginTop: 0,
-            marginBottom: rhythm(-1),
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: 'none',
-              textDecoration: 'none',
-              color: 'inherit',
-            }}
-            to={'/'}
-          >
-            🚧
-          </Link>
-        </h3>
-      )
-    }
     return (
       <div
         style={{
@@ -65,7 +22,16 @@ class Template extends React.Component {
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         }}
       >
-        {header}
+             <img
+              src={profilePic}
+              alt={`Jordan Wade`}
+              style={{
+                marginRight: rhythm(1 / 2),
+                marginBottom: 0,
+                width: rhythm(2),
+                height: rhythm(2),
+              }}
+            />
       </div>
     )
   }
