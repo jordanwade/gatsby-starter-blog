@@ -27,7 +27,7 @@ class Bio extends React.Component {
           }}
         />
         <p>
-          I'm a Software Developer at DataCamp. I grew up in a small town in
+          I'm a Software Developer at Differential. I grew up in a small town in
           Indiana and started as a carpenter on an Amish construction crew. I
           traded in my tool belt for all things development and design. Now, I
           call the state of Tennessee my home.
